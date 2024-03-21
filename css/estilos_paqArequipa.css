@@ -1,0 +1,1003 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 11pt;}
+    body {
+        margin: 0;
+        padding: 0;
+        
+        
+    } 
+    
+
+    /*-----ESTE COD CSS ES PARA EL MENSAJE DE COOKIES*/
+    #cookie-banner {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(230, 230, 230, 0.941);
+        padding: 10px;
+        text-align: center;
+        z-index: 9999; /* Asegura que esté por encima de todo */
+        display: none;
+        height: 185px;
+    }
+
+    #cookie-banner p{
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 200px;
+        padding-right: 200px;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #777;
+    }
+
+
+    /* Estilos para los botones de aceptar y cancelar */
+    #accept-btn, #cancel-btn {
+        margin: 7px;
+        padding: 7px 9px;
+        cursor: pointer;
+        border: none;
+        color: white;
+        background-color: rgba(23, 23, 200, 0.773);
+        border-radius: 5px;
+    }
+    
+    #accept-btn{
+        background-color: #777;
+
+    }
+
+    #accept-btn:hover{
+        background-color: #474747;
+
+    }
+    #cancel-btn:hover{
+        background-color: #474747;
+    }
+
+    #img_cookies{
+        height: 36px;
+        width: 36px;
+    }
+
+
+
+
+    /* ----------------TRANSICIÓN DE CARGA DE CADA PAGINA----------------*/
+    #loader-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente negro */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        transition: opacity 0.5s; /* Agrega una transición de opacidad */
+        opacity: 0; /* Inicialmente oculto */
+        pointer-events: none; /* No permite interacciones cuando está oculto */
+    }
+    #loader-wrapper p{
+        font-size: 25pt;
+        font-weight: 500;
+        color: rgb(255, 187, 0);
+    }
+
+    #loader-wrapper img{
+        width: 50px;
+        height: 50px;
+    }
+
+
+    #icon_transition{
+        border-radius: 25px;
+        margin-left: 10px; 
+        margin-bottom: 10px;
+        width: 50px;
+        height: auto;
+    }
+    
+    #loader {
+        border: 8px solid transparent;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+
+    
+    header {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding-left: 20px;
+        opacity: 1;
+        background-image: radial-gradient( darkcyan 0.45px); /* Diseño de fondo */
+        background-size: 9px 9px;
+        width: 100%;
+    }
+    
+    #logo-agencia{
+        margin-left: auto; /* Esto mueve el logo hacia la derecha */
+        margin-right: 0px;
+    }
+    
+
+
+/*CODIGO DE LA MODIFICACION DEL HEADER ...LOGO Y CONTACTOS */
+#header {
+    background-color:white;    /* Cambia el color de fondo según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    padding-top: 0px;
+    background-image: radial-gradient( darkcyan 0.45px);
+    background-size: 9px 9px;
+    
+}
+
+header {
+    max-width: 1300px;
+    margin-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+#contactos-header {
+    display: flex;
+    flex-direction: row; /* Alinear en línea recta */
+    align-items: initial;
+    margin-left: 0px;
+    width: 100%;
+}
+
+/* Estilos para cada párrafo dentro del div */
+#contactos-header p {
+    font-size: 10pt; /* Tamaño de fuente más pequeño */
+    margin-right: 9px;
+    margin-top: 19px;
+    margin-left: 20px;
+}
+
+/* Estilos para los íconos */
+#contactos-header svg {
+    width: 20px; /* Tamaño de los íconos */
+    height: 20px;
+    color: gold;
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+#contactos-header svg:hover{
+    color: black;
+}
+
+
+
+
+#icono_facebook svg{
+    color: rgb(9, 185, 185);
+    transform: scale(1.6);
+    margin: 20px;
+}
+#icono_facebook svg:hover{
+    color: black;
+}
+
+#icono_instagram svg{
+    color: rgb(9, 185, 185);
+    transform: scale(1.6);
+    margin: 20px;
+
+}
+#icono_instagram svg:hover{
+    color: black;
+
+}
+#icono_watsapp svg{
+    color: rgb(9, 185, 185);
+    transform: scale(1.6);
+    margin: 20px;
+}
+#icono_watsapp svg:hover{
+    color: black;
+
+}
+
+
+
+#reserva-button {
+    margin-top: 9px;
+    margin-right: auto; /* Esto alinea el botón a la izquierda */
+    margin-left: 20px; /* Ajusta el espacio entre el botón y el buscador según lo necesites */
+}
+
+#reserva-ya-button {
+    color: white; /* Color del texto del botón */
+    border: none;
+    background-color: rgb(15, 209, 15);
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#reserva-ya-button:hover {
+    background-color: rgba(5, 153, 5, 0.808); /* Cambia el color de fondo al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% del tamaño original */
+
+
+}
+
+
+
+
+
+/* -------AQUI EMPIEZA EL BUSCADOR -----------------*/
+
+
+#logo-buscador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 800px;
+    margin-right: 0;
+}
+
+
+
+#buscador-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+#buscador-bar input[type="text"] {
+    border: 1px solid rgb(250, 179, 48);
+    padding: 10px;
+    height: 32px;
+    padding-left: 40px;
+    width: 100%;
+    border-radius: 20px  0  0 20px;
+    outline: none;
+
+}
+#buscador-bar input[type="text"]:hover{
+    outline: none;
+}
+
+#buscador-bar button[type="button"] {
+    background-color: rgb(250, 179, 48); /* Color del botón de búsqueda */
+    color: #fff;
+    border: 1px  solid rgb(250, 179, 48);;
+    border-radius: 0 20px 20px 0;
+    padding-right: 25px;
+    padding-left: 15px;
+    height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#buscador-bar button:hover{
+    background-color: rgb(244, 160, 3);
+    color: white;
+    border: 1px solid rgb(244, 160, 3);
+
+}
+
+#buscador-button svg {
+    margin-right: 5px; /* Espacio entre el icono y el texto "Buscar" */
+}
+/*HASTA AQUI ES EL BUSCADOR------------------
+
+
+/* BARRA DE NAVEGACION--------------------------------------*/
+nav {
+    list-style: none;
+    background-color: rgb(29, 216, 216);
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul{
+    padding: 0px;
+    margin-bottom: 0;
+}
+nav li {
+    display: inline-block;
+    padding: 10px;
+    margin-inline: 25px;
+
+}
+nav li:hover{
+    background-color: gold ;
+    border-radius: 10px;
+}
+li a {
+    text-decoration: none;
+    font-size: 10pt;
+    opacity: 1;
+    color: white;
+}
+li a:hover{
+    color: black;
+}
+
+
+/* ESTE CODIGO USANDO @MEDIA QUERY ES PARA HACER QUE EL NAV SEA RESPONSIVE*/
+@media (max-width: 768px) {
+    nav {
+        text-align: center; /* Alinear el texto a la izquierda */
+    }
+    
+    nav li {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid gray; /* Agregar una línea entre elementos */
+    }
+}
+
+
+
+/*----------------ESTTA PARTE ES PARA EL BOTON CONSTANTE DE WATSAPP EN LA PARTE INFERIOR------*/
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    cursor: pointer;
+    background-color: #25d365ef;
+    padding: 10px;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  #whatsapp-icon {
+    color: white;
+    width: 39px;
+    height: 39px;
+    fill: white;
+    padding: 2px;
+  }
+
+
+
+/*DESDE AQUI ES EL CARRUSEL*/
+
+
+
+main {
+    max-width: none;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fffffff1;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+h2 {
+    color: #333;
+}
+
+
+
+
+
+
+/*IMAGEN DE FONDO DEL TITULO DE LOS PAQUETES */
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#imagenFondo {
+    margin-top: 0px;
+    width: 100%;
+    height: 92%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  
+}
+
+#banner::before {
+    content: ""; /* Crea un pseudo-elemento ::before */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con una opacidad del 50% */
+}
+
+#tituloArequipa {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#tituloArequipa b {
+    font-size: 25pt;
+}
+
+
+/*---------------------------DESDE AQUI VA LA PARTE DEL MAIN (TARJETAS DE PAQUETES)-----------------------------------------------*/
+
+#contenedorTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.141);
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 10px;
+    margin-bottom: 45px;
+    width: 300px;
+    position: relative; /* Añade posición relativa */
+    overflow: hidden; 
+    transition: transform 0.6s, filter 0.2s;
+
+}
+
+.tarjeta:hover {
+    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.185);
+    transform: scale(1.1);
+}
+
+.tarjeta img {
+    max-width: 100%;
+    margin: none;
+    height: auto;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    transition: filter 0.5s ease; 
+}
+.tarjeta img:hover{
+    filter: brightness(50%); 
+}
+
+.tarjeta h2 {
+    font-size: 20px;
+    color: #333;
+    padding: 5px;
+    margin: 0px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    color: #777;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.btnDetalles {
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: rgb(250, 179, 48);
+    color: white;
+    text-decoration: none;
+    font-size: 8pt;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Añade posición relativa */
+}
+
+.btnDetalles b {
+    font-size: 12px;
+}
+
+.btnDetalles:hover {
+    background-color: rgb(209, 145, 26);
+    color: black;
+}
+
+
+
+/* Agrega un seudoelemento ::after para la línea debajo de la etiqueta p */
+.tarjeta p::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px; /* Altura de la línea */
+    background-color: rgba(128, 128, 128, 0.432); /* Color de la línea */
+    margin-top: 10px; /* Espacio entre el párrafo y la línea */
+}
+
+
+.btnDetalles {
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: rgb(14, 192, 192);
+    color: white;
+    text-decoration: none;
+    font-size: 8pt;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+.btnDetalles b{
+    font-size: 12px;
+}
+
+.btnDetalles:hover {
+    background-color: rgb(17, 173, 173);
+    color: black;
+}
+
+/*-----------ESTE CODIGO ES PARA INSERTAR UN PRECIO A LAS TARJETAS */
+.precio {
+    background-color: gold;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: right;
+    border: none;
+    position: absolute; /* Añade posición absoluta */
+    top: 20%; /* Coloca el precio en la mitad vertical */
+    right: 0; /* Alinea el precio a la derecha */
+    transform: translateY(-50%); /* Alinea verticalmente el precio */
+}
+
+
+
+@media (max-width: 768px) {
+    .tarjeta {
+        width: calc(100% - 40px); /* Una tarjeta por fila en dispositivos más pequeños */
+    }
+}
+
+
+
+
+
+/*VALORACION EN ESTRELLAS DE LAS TARJETAS ----------------*/
+div img{
+    height: 100%;
+}
+#asidevideo{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+/* Estilo para las estrellas */
+.valoracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+/* Estilo para todas las estrellas (llenas y vacías) */
+.estrella {
+    font-size: 26px; /* Tamaño de la estrella */
+    color: gold; /* Color de las estrellas llenas */
+    margin: 0 3px; /* Espacio entre estrellas */
+}
+
+/* Estilo para las estrellas vacías */
+.estrella.vacio {
+    font-size: 26px; /* Tamaño de la estrella */
+    color: #c9c9c9; /* Color de las estrellas vacías */
+}
+
+
+#asidevideo{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+}
+
+
+
+
+/*EStilos para el ingreso de email*/
+
+.footer_email {
+    display: flex;
+    flex-direction: column; /* Establece la dirección de la disposición como columna */
+    align-items: center;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgb(29, 209, 209);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.ingreso_datos{
+   display: inline-block;
+   margin: 15px;
+   gap: 9px;
+}
+.ingreso_datos input{
+    width: 340px;
+    padding: 8px;
+    border-radius: 7px;
+    border: 1px solid rgb(143, 142, 142);
+    margin-left: 20px;
+    outline: none;
+
+}
+.ingreso_datos button{
+    margin-left: 3rem;
+    background-color: rgb(250, 179, 48);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 27px;
+    border: none;
+    padding: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 9px;
+}
+.ingreso_datos button:hover{
+   background-color: rgb(253, 198, 95);
+   color: white;
+   font-size: 14px;
+   font-weight: 700;
+}
+
+
+.footer_email h3 {
+    color: rgba(255, 255, 255, 0.923);
+    font-weight: 500;
+    text-align: center;
+    margin: 0; /* Elimina el margen predeterminado del h3 y p */
+    margin-bottom: 9px; 
+}
+
+.footer_email p {
+    color: rgb(52, 52, 52);
+    text-align: center;
+    margin: 0; /* Elimina el margen predeterminado del h3 y p */
+    margin-bottom: 9px; 
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.footer_email p strong{
+    color: rgb(8, 8, 218);
+    font-size: 13px;
+    cursor: pointer;
+
+}
+
+.ingreso_datos svg:hover{
+    color: rgb(5, 147, 147);
+}
+
+
+#btnInicio {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 217, 0);
+    color: #fff;
+    border: none;
+    padding: 16px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#btnInicio:hover{
+    background-color: rgb(5, 147, 147);
+}
+
+
+
+
+.maps_arequipa {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 65px 90px;
+}
+
+.maps_arequipa iframe {
+    width: 2000px;
+    position: relative;
+    z-index: 1; /* Z-index menor que el del h2 */
+}
+
+.maps_arequipa h2 {
+    text-align: center;
+    position: absolute;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para hacer más legible el texto */
+    padding: 10px;
+    margin: 0;
+    z-index: 2; /* Z-index mayor que el del iframe */
+}
+
+
+
+/*ESTILOS PARA EL FOOTER ALTERNATIVO*/
+
+
+#footerBoton {
+    display: flex;
+    justify-content: space-between; /* Alinea el texto a la izquierda y el botón a la derecha */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #fafafa;
+    border-bottom:1px solid rgba(6, 131, 6, 0.187) ;
+    padding: 20px;
+    gap: 30px;
+
+}
+
+#footerBoton h2 {
+    font-size: 20pt; /* Tamaño del texto */
+    color: rgba(6, 102, 102, 0.774);
+    margin-left: 40px; /* Elimina el margen predeterminado del encabezado */
+    flex-grow: 1; /* El texto ocupará todo el espacio restante */
+}
+
+#botonWatsapp {
+    padding: 10px 20px; /* Tamaño del botón */
+    margin-right: 230px;
+    margin-left: 20pxpx;
+    background-color: #4caf50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px; /* Tamaño del texto del botón */
+    transition: background-color 0.3s ease;
+}
+
+#botonWatsapp:hover {
+    background-color: #18751dda; /* Color de fondo del botón al pasar el mouse */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al 110% del tamaño original */
+}
+
+
+
+/* Estilos generales para el footer */
+.pie-de-pagina {
+    background-color: #fafafa;
+    color: #fff;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    background-size: 9px 9px;
+    border: none;
+
+}
+
+/* Estilos para la sección interna del footer */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+/* Estilos para cada sección del footer */
+.columna-contacto,
+.columna-enlaces {
+    flex: 0 0 calc(33.333% - 60px);  /* <-- esta codigo hace que el footer se divida en 3 partes sobre el ancho total */
+    text-align: left;
+
+}
+
+/* Estilos para los encabezados de las secciones */
+.columna-contacto h4,
+.columna-enlaces h4 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgb(71, 71, 71);
+    padding-left: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(6, 131, 6, 0.445);
+
+}
+.columna-contacto h4{
+    padding-left: 20px;
+}
+
+/* Estilos para los elementos dentro de las secciones */
+.columna-contacto p{
+    margin: 5px 0;
+    padding: 7px;
+    padding-left: 20px;
+
+}
+.columna-contacto p{
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgb(63, 63, 63);
+    font-family: inherit;
+
+}
+.columna-contacto svg{
+    color: rgb(89, 89, 89);
+    
+}
+
+.columna-contacto svg:hover{
+    color: rgba(204, 203, 203, 0.743);
+}
+.columna-enlaces ul,
+.columna-redes ul {
+    margin: 5px 0;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 0px;
+}
+.columna-enlaces h4{
+  padding-left: 20px;
+}
+
+/* Estilos para la lista de enlaces rápidos */
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-enlaces li {
+    margin-bottom: 5px;
+}
+
+.lista-enlaces li a{
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgb(68, 68, 68);
+    font-family: inherit;
+    transition: color .2s ease-out,opacity .2s;
+}
+
+.lista-enlaces li a:hover{
+    color: rgb(224, 223, 223);
+}
+
+/* Estilos para los iconos de redes sociales */
+.columna-redes{
+    padding-left: 20px;
+    margin-right: 50px;
+}
+.redes-sociales {
+    /* Elimina este bloque de estilos */
+    display: flex;
+    justify-content: center;
+}
+
+/* Añade un nuevo estilo para el contenedor del logo de la web */
+.logo-web-container {
+    text-align: center;
+    margin-bottom: 20px; /* Ajusta el espacio entre el logo y los íconos de redes sociales */
+}
+
+#logo-web {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 10px; /* Ajusta el espacio entre el logo y los íconos de redes sociales */
+}
+
+/* Añade estilos para los iconos de redes sociales */
+.redes-sociales a {
+    text-decoration: none;
+}
+
+/* Añade estilos específicos para cada ícono de redes sociales si es necesario */
+.redes-sociales a svg {
+    color: white; /* Ajusta el tamaño de los íconos según sea necesario */
+    margin-right: 12px;
+    background-color: rgb(23, 171, 171);
+    padding: 0px;
+    border-radius: 25px;
+
+}
+#facebook_icon {
+    color:rgb(23, 171, 171);
+    background-color: white;
+    padding: none;
+}
+
+#instagram_icon{
+    color:rgb(23, 171, 171);
+    background-color: rgb(23, 171, 171);
+}
+
+#tik_tok_icon{
+    color:white;
+    background-color: rgb(23, 171, 171);
+    padding: 5px;
+}
+
+
+#facebook_icon:hover {
+    color:rgba(6, 6, 203, 0.796);
+    background-color: white;
+    padding: none;
+}
+
+#instagram_icon:hover{
+    color:rgb(23, 171, 171);
+    background-color:rgba(255, 0, 0, 0.692);
+}
+
+#tik_tok_icon:hover{
+    color:white;
+    background-color: rgb(27, 15, 88);
+    padding: 5px;
+}
+
+
+
+
+.columna-copyright p {
+    margin: 0;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el pie de página inferior */
+
+.footer-inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(7, 144, 7, 0.782);
+    color: rgb(250, 249, 249);
+    padding: 2px;
+    margin-bottom: 25px;
+    height: 60px;
+}
+
+
+/*ESTE CODIGO ES PARA HACER QUE EL FOOTER SEA RESPONSIVE ------------------------*/
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Cambiar a diseño de columna */
+        text-align: center; /* Centrar el texto */
+    }
+    
+    .columna-contacto,
+    .columna-enlaces,
+    .columna-redes {
+        flex: 0 0 100%; /* Ocupar el ancho completo en dispositivos móviles */
+        text-align: center; /* Centrar el texto */
+        margin-bottom: 10px; /* Espacio entre las columnas */
+    }
+}
